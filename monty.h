@@ -46,7 +46,7 @@ typedef struct instruction_s
 void _tokenizer(char *string, stack_t **stk, unsigned int linenum);
 void free_stk(stack_t **stk, unsigned int linenum);
 int check_digit(char *token);
-void _ops(char *token, stack_t **stack, unsigned int linenum);
+void _ops(char *token, stack_t **stk, unsigned int linenum);
 void push(stack_t **stk, unsigned int linenum);
 void pall(stack_t **stk, unsigned int linenum);
 void pint(stack_t **stk, unsigned int linenum);
