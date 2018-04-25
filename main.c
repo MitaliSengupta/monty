@@ -40,6 +40,7 @@ int main(int argc, char **argv)
 	}
 	fclose(file);
 	free(buff);
+	free(string);
 	if (stk != NULL)
 		free_stk(&stk, linenum);
 	return (0);
