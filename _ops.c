@@ -44,6 +44,7 @@ void _ops(char *token, stack_t **stk, unsigned int linenum)
  */
 void nop(stack_t **stk, unsigned int linenum)
 {
-        (void)stk;
-	(void)linenum;
+        (void) stk;
+	(void) linenum;
+	return;
 }
