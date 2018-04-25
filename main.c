@@ -42,6 +42,7 @@ int main(int argc, char **argv)
 	free(buff);
 	if (stk != NULL)
 		free_stk(&stk, linenum);
+	return (0);
 }
 
 /**
