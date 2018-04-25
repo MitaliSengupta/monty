@@ -8,6 +8,10 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <stdarg.h>
+#include <string.h>
+#include <ctype.h>
+
+extern int holder;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -38,5 +42,17 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+void _tokenizer(char *string, stack_t **stk, unsigned int linenum);
+void free_stk(stack_t **stk, unsigned int linenum);
+int check_digit(char *token);
+void _ops(char *token, stack_t **stack, unsigned int linenum);
+void push(stack_t **stk, unsigned int linenum);
+void pall(stack_t **stk, unsigned int linenum);
+void pint(stack_t **stk, unsigned int linenum);
+void pop(stack_t **stk, unsigned int linenum);
+void swap(stack_t **stk, unsigned int linenum);
+void add(stack_t **stk, unsigned int linenum);
+void nop(stack_t **stk, unsigned int linenum);
 
 #endif
