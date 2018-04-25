@@ -11,7 +11,7 @@ void push(stack_t **stk, unsigned int linenum)
 {
 	stack_t *new;
 
-	if (*stk == NULL)
+	if (stk == NULL)
 	{
 		printf("L%d: invalid stack\n", linenum);
 		exit(EXIT_FAILURE);
