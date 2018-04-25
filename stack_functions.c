@@ -49,7 +49,6 @@ void pall(stack_t **stk, unsigned int linenum)
 	if (stk == NULL)
 	{
 		printf("L%d: invalid stack\n", linenum);
-		free_stk(stk, linenum);
 		exit(EXIT_FAILURE);
 	}
 
@@ -75,7 +74,6 @@ void pop(stack_t **stk, unsigned int linenum)
 	if (stk == NULL || *stk == NULL)
 	{
 		printf("L%d: can't pop an empty stack\n", linenum);
-		free_stk(stk, linenum);
 		exit(EXIT_FAILURE);
 	}
 	if ((*stk)->next != NULL)
@@ -104,7 +102,6 @@ void pint(stack_t **stk, unsigned int linenum)
 	if (stk == NULL || *stk == NULL)
 	{
 		printf("L%d: can't pint, stack empty\n", linenum);
-		free_stk(stk, linenum);
 		exit(EXIT_FAILURE);
 	}
 	else
