@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- *
- *
- *
- *
- *
+ * push - adds to the beginning of the stack
+ * @stk: top of stack
+ * @linenum: line number for the passed token
+ * Return: void
  */
 void push(stack_t **stk, unsigned int linenum)
 {
@@ -35,12 +34,10 @@ void push(stack_t **stk, unsigned int linenum)
 }
 
 /**
- *
- *
- *
- *
- *
- *
+ * pall - function prints all of stack
+ * @stk: top of stack
+ * @linenum: line number
+ * Return: void
  */
 void pall(stack_t **stk, unsigned int linenum)
 {
@@ -62,12 +59,10 @@ void pall(stack_t **stk, unsigned int linenum)
 }
 
 /**
- *
- *
- *
- *
- *
- *
+ * pop - function to pop the top of stack
+ * @stk: top of stack
+ * @linenum: line number
+ * Return: void
  */
 void pop(stack_t **stk, unsigned int linenum)
 {
@@ -91,11 +86,10 @@ void pop(stack_t **stk, unsigned int linenum)
 }
 
 /**
- *
- *
- *
- *
- *
+ * pint - function prints the value at the top of the stack
+ * @stk: stack
+ * @linenum: line number
+ * Return: void
  */
 void pint(stack_t **stk, unsigned int linenum)
 {
@@ -109,11 +103,10 @@ void pint(stack_t **stk, unsigned int linenum)
 }
 
 /**
- *
- *
- *
- *
- *
+ * swap - swapping first two elements on top of stack
+ * @stk: stack
+ * @linenum: line number
+ * Return: void
  */
 void swap(stack_t **stk, unsigned int linenum)
 {

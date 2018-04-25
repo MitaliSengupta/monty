@@ -1,12 +1,11 @@
 #include "monty.h"
 
 /**
- *
- *
- *
- *
- *
- *
+ * _ops - compare functions to tokens and executes them
+ * @token: command recieved
+ * @stk: stack
+ * @linenum: number of line
+ * Return: void
  */
 void _ops(char *token, stack_t **stk, unsigned int linenum)
 {
@@ -38,14 +37,13 @@ void _ops(char *token, stack_t **stk, unsigned int linenum)
 }
 
 /**
- *
- *
- *
- *
+ * nop - function does nothing
+ * @stk: stack
+ * @linenum: line number
+ * Return: void
  */
 void nop(stack_t **stk, unsigned int linenum)
 {
-        (void) stk;
-	(void) linenum;
-	return;
+	(void)stk;
+	(void)linenum;
 }

@@ -1,14 +1,12 @@
 #include "monty.h"
 
-
 int holder;
 
-
 /**
- *
- *
- *
- *
+ * main - main function
+ * @argc: argument counts
+ * @argv: arguments passed
+ * Return: success
  */
 int main(int argc, char **argv)
 {
@@ -19,10 +17,10 @@ int main(int argc, char **argv)
 	stack_t *stk = NULL;
 
 	if (argc != 2)
-    {
-	    printf("USAGE: monty file\n");
-	    exit(EXIT_FAILURE);
-    }
+	{
+		printf("USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
@@ -46,10 +44,11 @@ int main(int argc, char **argv)
 }
 
 /**
- *
- *
- *
- *
+ * _tokenizer - function to tokenize strings and commands
+ * @string: string to be tokenized
+ * @stk: pointer to the stack
+ * @linenum: line numbers
+ * Return: void
  */
 void _tokenizer(char *string, stack_t **stk, unsigned int linenum)
 {
@@ -77,11 +76,9 @@ void _tokenizer(char *string, stack_t **stk, unsigned int linenum)
 }
 
 /**
- *
- *
- *
- *
- *
+ * check_digit - checks if string is a number
+ * @token: string to check
+ * Return: 1 if number, 0 if not
  */
 int check_digit(char *token)
 {

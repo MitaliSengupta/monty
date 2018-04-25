@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- *
- *
- *
- *
- *
+ * add - function to add top two elements on stack
+ * @stk: stack
+ * @linenum: line number
+ * Return: void
  */
 void add(stack_t **stk, unsigned int linenum)
 {
