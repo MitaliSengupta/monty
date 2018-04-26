@@ -1,7 +1,5 @@
 #include "monty.h"
 
-int holder;
-
 /**
  * main - main function
  * @argc: argument counts
