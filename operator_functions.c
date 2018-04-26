@@ -107,3 +107,30 @@ void mul(stack_t **stk, unsigned int linenum)
 	holder = multiply;
 	push(stk, linenum);
 }
+
+
+
+/**
+ * mod - function to find rem top two elements on stack
+ * @stk: stack
+ * @linenum: line number
+ * Return: void
+ */
+void mod(stack_t **stk, unsigned int linenum)
+{
+	int rem;
+
+	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)
+	{
+		printf("L%d: can't mod, stack too short\n", linenum);
+		free_stk(stk, linenum);
+		exit(EXIT_FAILURE);
+	}
+
+	rem = holder;
+	pop(stk, linenum);
+	rem = holder % rem;
+	pop(stk, linenum);
+	holder = rem;
+	push(stk, linenum);
+}
