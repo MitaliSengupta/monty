@@ -19,6 +19,7 @@ void _ops(char *token, stack_t **stk, unsigned int linenum)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 
