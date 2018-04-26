@@ -21,6 +21,7 @@ void _ops(char *token, stack_t **stk, unsigned int linenum)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", _div},
+		{"mul", mul},
 		{NULL, NULL}
 	};
 
