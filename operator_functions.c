@@ -67,6 +67,13 @@ void _div(stack_t **stk, unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 
+	if (holder == 0)
+	{
+		printf("L%d: division by zero\n", linenum);
+		free_stk(stk, linenum);
+		exit(EXIT_FAILURE);
+	}
+
 	divide = holder;
 	pop(stk, linenum);
 	divide = holder / divide;
