@@ -62,5 +62,6 @@ void pchar(stack_t **stk, unsigned int linenum);
 void pstr(stack_t **stk, unsigned int linenum);
 void rotl(stack_t **stk, unsigned int linenum);
 void rotr(stack_t **stk, unsigned int linenum);
+void _queue(stack_t **stk, unsigned int linenum);
 
 #endif
