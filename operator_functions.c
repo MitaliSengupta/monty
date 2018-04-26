@@ -127,6 +127,13 @@ void mod(stack_t **stk, unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 
+	if (holder == 0)
+	{
+		printf("L%d: division by zero", linenum);
+		free_stk(stk, linenum);
+		exit(EXIT_FAILURE);
+	}
+
 	rem = holder;
 	pop(stk, linenum);
 	rem = holder % rem;
