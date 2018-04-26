@@ -58,4 +58,9 @@ void sub(stack_t **stk, unsigned int linenum);
 void _div(stack_t **stk, unsigned int linenum);
 void mul(stack_t **stk, unsigned int linenum);
 void mod(stack_t **stk, unsigned int linenum);
+void pchar(stack_t **stk, unsigned int linenum);
+void pstr(stack_t **stk, unsigned int linenum);
+void rotl(stack_t **stk, unsigned int linenum);
+void rotr(stack_t **stk, unsigned int linenum);
+
 #endif
