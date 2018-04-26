@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- *
- *
- *
- *
- *
+ * _queue - FIFO
+ * @stk: stack
+ * @linenum: line number
+ * Return: void
  */
 void _queue(stack_t **stk, unsigned int linenum)
 {

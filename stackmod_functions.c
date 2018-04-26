@@ -28,7 +28,7 @@ void pchar(stack_t **stk, unsigned int linenum)
  * @linenum: unused
  * Return: void
  */
-void pstr(stack_t **stk,__attribute__((unused)) unsigned int linenum)
+void pstr(stack_t **stk, __attribute__((unused)) unsigned int linenum)
 {
 	stack_t *str;
 

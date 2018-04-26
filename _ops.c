@@ -10,7 +10,7 @@
 void _ops(char *token, stack_t **stk, unsigned int linenum)
 {
 	int a = 0;
-	static char check = 0;
+	int check = 0;
 
 	instruction_t op[] = {
 		{"push", push},
