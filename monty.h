@@ -12,6 +12,7 @@
 #include <ctype.h>
 
 extern int holder;
+int holder;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
