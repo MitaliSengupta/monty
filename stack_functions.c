@@ -24,7 +24,7 @@ void push(stack_t **stk, unsigned int linenum)
 		free_stk(stk, linenum);
 		exit(EXIT_FAILURE);
 	}
-	new->n = holder;
+	new->n = variables.holder;
 	new->prev = NULL;
 	new->next = *stk;
 
@@ -74,7 +74,7 @@ void pop(stack_t **stk, unsigned int linenum)
 	if ((*stk)->next != NULL)
 	{
 		*stk = (*stk)->next;
-		holder = (*stk)->n;
+		variables.holder = (*stk)->n;
 		free((*stk)->prev);
 		(*stk)->prev = NULL;
 	}

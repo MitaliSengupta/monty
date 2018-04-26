@@ -11,8 +11,14 @@
 #include <string.h>
 #include <ctype.h>
 
-extern int holder;
-int holder;
+typedef struct var
+{
+	int holder;
+	char check;
+}var_t;
+
+extern var_t variables;
+var_t variables;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)

@@ -17,11 +17,11 @@ void add(stack_t **stk, unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 
-	adding = holder;
+	adding = variables.holder;
 	pop(stk, linenum);
-	adding += holder;
+	adding += variables.holder;
 	pop(stk, linenum);
-	holder = adding;
+	variables.holder = adding;
 	push(stk, linenum);
 }
 
@@ -42,11 +42,11 @@ void sub(stack_t **stk, unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 
-	subtract = holder;
+	subtract = variables.holder;
 	pop(stk, linenum);
-	subtract = holder - subtract;
+	subtract = variables.holder - subtract;
 	pop(stk, linenum);
-	holder = subtract;
+	variables.holder = subtract;
 	push(stk, linenum);
 }
 
@@ -67,18 +67,18 @@ void _div(stack_t **stk, unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 
-	if (holder == 0)
+	if (variables.holder == 0)
 	{
 		printf("L%d: division by zero\n", linenum);
 		free_stk(stk, linenum);
 		exit(EXIT_FAILURE);
 	}
 
-	divide = holder;
+	divide = variables.holder;
 	pop(stk, linenum);
-	divide = holder / divide;
+	divide = variables.holder / divide;
 	pop(stk, linenum);
-	holder = divide;
+	variables.holder = divide;
 	push(stk, linenum);
 }
 
@@ -100,11 +100,11 @@ void mul(stack_t **stk, unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 
-	multiply = holder;
+	multiply = variables.holder;
 	pop(stk, linenum);
-	multiply = holder * multiply;
+	multiply = variables.holder * multiply;
 	pop(stk, linenum);
-	holder = multiply;
+	variables.holder = multiply;
 	push(stk, linenum);
 }
 
@@ -127,17 +127,17 @@ void mod(stack_t **stk, unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 
-	if (holder == 0)
+	if (variables.holder == 0)
 	{
 		printf("L%d: division by zero\n", linenum);
 		free_stk(stk, linenum);
 		exit(EXIT_FAILURE);
 	}
 
-	rem = holder;
+	rem = variables.holder;
 	pop(stk, linenum);
-	rem = holder % rem;
+	rem = variables.holder % rem;
 	pop(stk, linenum);
-	holder = rem;
+	variables.holder = rem;
 	push(stk, linenum);
 }

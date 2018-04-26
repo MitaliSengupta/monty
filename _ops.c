@@ -10,7 +10,6 @@
 void _ops(char *token, stack_t **stk, unsigned int linenum)
 {
 	int a = 0;
-	static 	char check = 0;
 
 	instruction_t op[] = {
 		{"push", push},
@@ -33,17 +32,17 @@ void _ops(char *token, stack_t **stk, unsigned int linenum)
 
 	if (strcmp(token, "stack") == 0)
 	{
-		check = 0;
+		variables.check = 0;
 		return;
 	}
 
 	if (strcmp(token, "queue") == 0)
 	{
-		check = 1;
+		variables.check = 1;
 		return;
 	}
 
-	if (check == 1 && strcmp(token, "push") == 0)
+	if (variables.check == 1 && strcmp(token, "push") == 0)
 	{
 		_queue(stk, linenum);
 		return;

@@ -13,8 +13,8 @@ void pchar(stack_t **stk, unsigned int linenum)
 		printf("L%d: can't pchar, stack empty\n", linenum);
 		exit(EXIT_FAILURE);
 	}
-	if (isascii(holder))
-		printf("%c\n", holder);
+	if (isascii(variables.holder))
+		printf("%c\n", variables.holder);
 	else
 	{
 		printf("L%d: can't pchar, value out of range\n", linenum);
@@ -32,7 +32,7 @@ void pstr(stack_t **stk, __attribute__((unused)) unsigned int linenum)
 {
 	stack_t *str;
 
-	if (stk == NULL || *stk == NULL || holder == 0)
+	if (stk == NULL || *stk == NULL || variables.holder == 0)
 	{
 		printf("\n");
 		return;

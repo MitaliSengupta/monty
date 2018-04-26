@@ -23,7 +23,7 @@ void _queue(stack_t **stk, unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 
-	new->n = holder;
+	new->n = variables.holder;
 	new->next = NULL;
 
 	if (*stk == NULL)
@@ -40,5 +40,5 @@ void _queue(stack_t **stk, unsigned int linenum)
 
 	old->next = new;
 	new->prev = old;
-	holder = (*stk)->n;
+	variables.holder = (*stk)->n;
 }
